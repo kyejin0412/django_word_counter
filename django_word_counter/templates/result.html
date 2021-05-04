@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        table {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        단어의 개수는?
+    </h1>
+    <hr>
+    {% for word, count in word_counts %}
+        <table border="1" bordercolor="brown">
+            <th bgcolor="burlywood">단어</th>
+            <th bgcolor="burlywood">개수</th>
+            {% for word, count in word_counts %}
+            <tr bgcolor="cornsilk">
+                <td>{{word}}</td>
+                <td>{{count}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
